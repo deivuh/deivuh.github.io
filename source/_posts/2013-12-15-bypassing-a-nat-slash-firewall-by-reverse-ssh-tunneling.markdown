@@ -9,7 +9,7 @@ categories: sysadmin notes how-to
 
 
 
-Not until last week, my ISP finally decided to change my neighbourhood / home connection from IPoATM to PPPoE, and giving me a direct access to the internet, thus using my router’s NAT configuration.
+Not until last week, my ISP finally decided to change my home's internet connection from IPoATM to PPPoE, and giving me a more direct access to the internet, thus using my router’s NAT configuration.
 
 ## The Problem ##
 
