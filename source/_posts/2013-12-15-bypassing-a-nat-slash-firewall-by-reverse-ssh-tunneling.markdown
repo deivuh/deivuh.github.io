@@ -17,11 +17,13 @@ Before they made the changes, I had to struggle with server applications or havi
 
 {% img /images/posts/ssh-reverse-tunneling/problem.png  'The problem' 'All incoming connections are blocked' %}
 
+<!-- more -->
+
 ## Using SSH Reverse Tunneling ##
 
 Reading on the web I found out about reverse SSH tunnelling, which consists on creating a SSH connection from the destination machine behind the firewall to the source machine. Since an SSH connection was already open from the destination to the source, all it’s left is to connect through the same SSH connection. 
 
-<!-- more -->
+
 
 The solution would be as shown below.
 
