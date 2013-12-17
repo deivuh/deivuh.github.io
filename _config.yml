@@ -4,10 +4,10 @@
 
 url: http://davidhsiehlo.com
 title: David Hsieh
-subtitle: Personal blog
+subtitle: Thoughts and notes about CS, tech and life
 author: David Hsieh
 simple_search: http://google.com/search
-description:
+description: desc
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -90,7 +90,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: davidhsiehlo
 disqus_show_comment_count: false
 
 # Google Analytics
