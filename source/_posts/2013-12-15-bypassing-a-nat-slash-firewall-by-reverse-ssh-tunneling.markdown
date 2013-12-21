@@ -3,7 +3,7 @@ layout: post
 title: "Bypassing a NAT/Firewall by Reverse SSH Tunneling"
 date: 2013-12-15 23:07
 comments: true
-categories: sysadmin notes how-to
+categories: sysadmin notes how-to networks
 ---
 
 
@@ -50,13 +50,12 @@ This works, but in this case, but both the source and destination machines would
 
 ##My setup with Tomato and a VPS##
 
-I have a VPS accesible from anywhere, and a WRT54GL router with Tomato firmware at my home network which can access to my HomePC. Since both hosts do stay on 24/7 is possible to use them to keep an open SSH connection between them. 
+I have a VPS accesible from anywhere, and a [WRT54GL](http://en.wikipedia.org/wiki/Linksys_WRT54G_series#WRT54GL router) with [Tomato firmware](http://www.polarcloud.com/tomato) at my home network which can access to my HomePC. Since both hosts do stay on 24/7 is possible to use them to keep an open SSH connection between them. 
 
 So, including those to the equation, the solution setup would be:
 
 
    * The router creates an SSH connection with port forwarding to the VPS
-
    * When needed, from my laptop I can connect from anywhere to my VPS
    * Then from the VPS, a reverse SSH tunnel is made from the listening port through the established connection
    * From the router I can just Wake on LAN my Home PC, and access through another ssh connection o any other way.
