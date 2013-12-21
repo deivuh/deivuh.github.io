@@ -1,0 +1,47 @@
+---
+layout: post
+title: "Finally, No More Double NAT from My ISP"
+date: 2013-12-20 23:05:52 -0600
+comments: true
+categories: sysadmin notes networks
+---
+
+
+A few years ago, after struggling with BitTorrent clients and online game servers closed port warning and error messages, I’ve been learning about DSL routing and computer networks. That’s when I realised that I would never be able to have an open port or a public IP address to my home network, because my network was behind an ATM Bridge.
+
+Having helped to setup some home networks to some family members, I ran some tests and apparently their DSL router had an actual dynamic public IP address, and were able to have open ports. PPPoE was the type of connection it showed after checking their DSL routers, and they actually had the same ISP. My deduction was that old internet users got stuck with IPoATM connections, and new users had PPPoE connections; it made sense, because when my home’s internet service was acquired, a technician was required to make the router configuration and installation, while new users just had to plug and play their line filters and DSL routers. Until few months ago my solution was to [setup a SSH reverse tunnel to access my home network](http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/), but now, it's not needed anymore.
+
+
+
+Last week after noticing my internet connection was gone, I called to my ISP tech support, and it went like this:
+
+<!-- more -->
+
+>**Tech support guy:** Hello […] how can I help you?
+
+>**Me:** I don't have internet connection.
+
+>**Tech support guy:** All right, let me check […]
+
+>**Tech support guy:** Sir, are you nearby the router?
+
+>**Me:** Yes... -_-
+
+Here I was expecting to hear the [“Have you tried to turn off and on again?”](http://www.youtube.com/watch?feature=player_detailpage&v=nn2FB1P_Mn8#t=10) and ping routine, and ready to tell him to just skip it, but that's not what happened:
+
+>**Tech support guy:** Could you get a pointy object and use it to press the *reset button* located in the back of the router?
+
+This is when I instantly thought about the possibility of having a infrastructure change of my internet connection
+
+After reseting the router, that was it, the IPoATM was gone, and the ISP pre flashed (not the factory default)
+PPPoE configuration was loaded. Dynamic public IP address check; externally reachable port forwarding check! Yeah! :)
+
+>**Me:** Oh, it did work! Thanks :)
+
+
+Having direct internet connection, I decided to use my WRT54GL router as my main DSL and network manager and use my ISP provided DSL router as a bridge. But right after selection the connection configuration on the DSL router’s web GUI, the bridge option wasn’t there, and actually the ISP PPPoE’s connection configuration was the only option. So far I was more than annoyed by my ISP’s restrictions, since I’ve been facing one after another. Searching on the web, I found out that [people that were facing the same problem solved it by upgrading their firmware to a newer generic version](http://www.boards.ie/vbulletin/showthread.php?p=63841326#post63841326). I used the firmware linked in [that post](http://www.boards.ie/vbulletin/showthread.php?p=63841326#post63841326), but instead of setting up a TFTP and BOOTP server as indicated, I downloaded and used the official setup wizard (for Windows only) [here](http://download.modem-help.co.uk/mfcs-A/Alcatel/Modems/TG585/v7/Wizards/Setup/Windows/EN/).
+
+With the new flashed generic firmware, everything went smoothly: I setup the DSL router to bridge mode, configured my WRT54GL [Tomato’s firmware](http://www.polarcloud.com/tomato) to PPPoE mode, entering the connections user and password (my ISP, as you guessed doesn’t provide those, but it could be easily found out by using a [password field shower script](http://stackoverflow.com/questions/1383142/show-password-as-text-control) before flashing the router), and done! :)
+
+All I did after was setup a [dynamic DNS account](http://www.noip.com) and use it on Tomato’s client to automatically update a subdomain to the current non-static IP address.
+
