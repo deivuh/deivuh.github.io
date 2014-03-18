@@ -11,9 +11,9 @@ categories: media script ruby
 
 After I finally built the _Gunpla_ I got a couple years ago (Which I'll write about  later on). I felt more interested about the series, [Gundam 00](http://gundam.wikia.com/wiki/Mobile_Suit_Gundam_00).
 
-Since I watch most of the series and movies with [Plex](https://plex.tv), I set everything up was ready to watch it on the TV. The opening started to play, but there was something missing: The subs! Unless you understand Japanese, subtitles are essential.
+Since I watch most of the series and movies with [Plex](https://plex.tv), I set everything up to watch these new series on my TV. The opening started to play, but there was something missing: The subs! Unless you understand Japanese, subtitles are essential.
 
-Unable to start watching it I tried to figure out whether it was my TV's Plex client or the Plex Media server configuration. Searching on the web, I found out that the problem was that Samsung's Plex App doesn't support embedded subtitles (e.g. subtitles contained in a MKV container file).
+Unable to watch anything, I tried to figure out whether it was my TV's Plex client or the Plex Media server configuration. Searching on the web, I found out that the problem was that Samsung's Plex App doesn't support embedded subtitles (e.g. subtitles contained in a MKV container file).
 
 But subtitle files on the same root directory were supported, so what I had to do was to use two tools form [MKVtoolsnix](http://www.bunkus.org/videotools/mkvtoolnix/):   
 
@@ -31,7 +31,7 @@ done
 ```
 
 
-Even though each subtitle file was extracted and named the same as it's corresponding video file, problem persisted, the subtitle files were detected but not shown. 
+Even though each subtitle file was extracted and named the same as it's corresponding video file, the same problem persisted, the subtitle files were detected but not shown. 
 
 It turns out that Samsung's Plex App only support [SubRip Text (SRT)](http://www.matroska.org/technical/specs/subtitles/srt.html) files, and the subtitles contained on those MKVs are rich [SubStationAlpha (ASS/SSA)](http://www.matroska.org/technical/specs/subtitles/ssa.html) subtitles. 
 
