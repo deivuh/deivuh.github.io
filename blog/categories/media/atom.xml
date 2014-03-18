@@ -4,7 +4,7 @@
   <title><![CDATA[Category: media | David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/blog/categories/media/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-03-18T09:51:46-06:00</updated>
+  <updated>2014-03-18T09:55:55-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -50,7 +50,9 @@ mkvextract tracks "$file" TRACKNUMBER:"$name".ass
 
 <p>Apparently the support for both <em>SSA</em> subtitle files and embedded subtitles  were due to Samsung SDK restrictions.</p>
 
-<p>Having no success finding a proper <em>SSA</em> to <em>SRT</em> batch converter (for Linux or OSX), I made a little script to extract those SSA subtitles from the MKVs, and converting each of them into SRT format. You can get it <a href="https://github.com/deivuh/MKV-SRT-Extractor">here</a>.</p>
+<p>Having no success finding a proper <em>SSA</em> to <em>SRT</em> batch converter (for Linux or OSX), I made a little script to extract those SSA subtitles from the MKVs, and converting each of them into SRT format.</p>
+
+<p>You can grab the script <a href="https://github.com/deivuh/MKV-SRT-Extractor">here</a>.</p>
 
 <p>Make sure to have both <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> and <a href="http://www.bunkus.org/videotools/mkvtoolnix/">MKVToolnix</a> installed</p>
 ]]></content>
