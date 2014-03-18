@@ -3,7 +3,7 @@ layout: post
 title: "MKV SRT Extractor for Samsung Plex users"
 date: 2014-03-15 23:51:25 -0600
 comments: true
-categories: media, script, ruby
+categories: media script ruby
 ---
 
 
