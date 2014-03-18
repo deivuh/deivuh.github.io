@@ -37,7 +37,9 @@ It turns out that Samsung's Plex App only support [SubRip Text (SRT)](http://www
 
 Apparently the support for both _SSA_ subtitle files and embedded subtitles  were due to Samsung SDK restrictions.
 
-Having no success finding a proper _SSA_ to _SRT_ batch converter (for Linux or OSX), I made a little script to extract those SSA subtitles from the MKVs, and converting each of them into SRT format. You can get it [here](https://github.com/deivuh/MKV-SRT-Extractor).
+Having no success finding a proper _SSA_ to _SRT_ batch converter (for Linux or OSX), I made a little script to extract those SSA subtitles from the MKVs, and converting each of them into SRT format. 
+
+You can grab the script [here](https://github.com/deivuh/MKV-SRT-Extractor).
 
 Make sure to have both [Ruby](https://www.ruby-lang.org/en/downloads/) and [MKVToolnix](http://www.bunkus.org/videotools/mkvtoolnix/) installed
 
