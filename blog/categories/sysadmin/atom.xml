@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sysadmin | David Hsieh]]></title>
+  <link href="http://davidhsiehlo.com/blog/categories/sysadmin/atom.xml" rel="self"/>
+  <link href="http://davidhsiehlo.com/"/>
+  <updated>2014-03-17T21:26:52-06:00</updated>
+  <id>http://davidhsiehlo.com/</id>
+  <author>
+    <name><![CDATA[David Hsieh]]></name>
+    <email><![CDATA[me@davidhsiehlo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Why using Google DNS wasn't a great idea]]></title>
+    <link href="http://davidhsiehlo.com/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/"/>
+    <updated>2014-01-29T18:51:31-06:00</updated>
+    <id>http://davidhsiehlo.com/blog/2014/01/29/why-using-google-dns-wasnt-great-idea</id>
+    <content type="html"><![CDATA[<!-- ##Why setting up Google DNS as my router's default DNS server was a bad idea# -->
+
+
+<p>During the last couple of week of last month, I noticed delays while browsing the web, especially Reddit, up to the point that started to bug me. Was it because of the <a href="http://davidhsiehlo.com/blog/2013/12/20/finally/">recent change made by my ISP</a>? Or because I changed my Tomato router to manage my DSL connection?</p>
+
+<p>The first thing I did was a <a href="http://www.speedtest.net/my-result/3268882393">speed test</a>, but everything seemed to be normal, so it wasn&rsquo;t a speed issue. So the DNS server became my first suspect, since I setup my router to use Google DNS by default, both main and alternate server. But why would Google DNS server be slow? I thought.</p>
+
+<p>So I proceeded to make some tests:</p>
+
+<p>First, I ran a ping test to reddit.com domain:</p>
+
+<pre><code>➜  ~  ping www.reddit.com
+PING a659.b.akamai.net (165.254.57.144): 56 data bytes
+64 bytes from 65.120.60.171: icmp_seq=400 ttl=48 time=89.331 ms
+64 bytes from 65.120.60.171: icmp_seq=401 ttl=48 time=93.348 ms
+64 bytes from 65.120.60.171: icmp_seq=402 ttl=48 time=92.700 ms
+....
+64 bytes from 65.120.60.171: icmp_seq=755 ttl=48 time=360.952 ms
+64 bytes from 65.120.60.171: icmp_seq=756 ttl=48 time=284.577 ms
+64 bytes from 65.120.60.171: icmp_seq=757 ttl=48 time=201.729 ms
+</code></pre>
+
+<p>The average was about 90 ms, which is slow but acceptable; but there were times were it reached up to 360+ ms of latency! That&rsquo;s high enough to be noticeable when browsing.</p>
+
+<!-- more -->
+
+
+<p>So I did some ping tests to Google DNS server too:</p>
+
+<pre><code>➜  ~  ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: icmp_seq=0 ttl=38 time=57.962 ms
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=38 time=58.151 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=38 time=60.308 ms
+...
+64 bytes from 8.8.8.8: icmp_seq=104 ttl=38 time=510.392 ms
+64 bytes from 8.8.8.8: icmp_seq=105 ttl=38 time=236.928 ms
+64 bytes from 8.8.8.8: icmp_seq=106 ttl=38 time=154.764 ms
+</code></pre>
+
+<p>Apparently, the speed problem was indeed originated from the DNS server connection.</p>
+
+<p>That&rsquo;s when the first possibility came to my mind. To confirm, the next thing I did was to run a traceroute to the Google DNS server:</p>
+
+<pre><code>➜  ~  traceroute 8.8.8.8
+traceroute to 8.8.8.8 (8.8.8.8), 64 hops max, 52 byte packets
+ 1  192.168.2.1 (192.168.2.1)  1.204 ms  1.048 ms  1.230 ms
+ 2  10.192.34.115 (10.192.34.115)  6.730 ms  6.707 ms  6.607 ms
+ 3  10.192.56.149 (10.192.56.149)  7.416 ms  7.702 ms  7.261 ms
+ 4  * * *
+ 5  10.192.37.213 (10.192.37.213)  12.911 ms  48.465 ms  89.934 ms
+ 6  10.192.37.169 (10.192.37.169)  152.473 ms  137.849 ms  16.745 ms
+ 7  10.192.55.150 (10.192.55.150)  18.766 ms  19.843 ms  192.897 ms
+ 8  10.192.12.38 (10.192.12.38)  195.543 ms  171.874 ms  442.763 ms
+ 9  inetin-ptobar-ptobarrios-6-tge1-0-0.uninet.net.mx (187.174.64.26)   309.486 ms  309.899 ms  307.067 ms
+10  ideint-miami-americas-15-tge0-0-3-0.uninet.net.mx (201.125.198.10)      58.064 ms  58.251 ms  57.935 ms
+11  customer-201-125-242-65.uninet.net.mx (201.125.242.65)  58.259 ms   58.076 ms  58.378 ms
+12  209.85.253.74 (209.85.253.74)  60.183 ms  61.403 ms
+209.85.253.118 (209.85.253.118)  103.468 ms
+13  209.85.252.96 (209.85.252.96)  79.788 ms  111.421 ms
+209.85.252.98 (209.85.252.98)  100.892 ms
+14  209.85.243.254 (209.85.243.254)  70.847 ms
+209.85.248.31 (209.85.248.31)  75.368 ms
+    209.85.243.254 (209.85.243.254)  57.866 ms
+15  * * *
+16  google-public-dns-a.google.com (8.8.8.8)  77.301 ms  76.182 ms  73.930 ms
+</code></pre>
+
+<p>By using an IP location service, <a href="http://www.iplocation.net/index.php?query=209.85.243.254">the IP address of the last hop resulted from Georgia, USA</a>.</p>
+
+<p>Well, just as I thought, the DNS server reached was actually from the US, as I checked thereafter, <a href="http://blog.archit.in/2012/02/google-public-dns-server-locations-list/">there are actually no Google DNS servers closer to Guatemala</a>.</p>
+
+<p>Well, so I setup the DNS servers that were previously provided by my ISP, and problem solved.</p>
+
+<pre><code>➜  ~  ping www.reddit.com
+PING a659.b.akamai.net (186.151.236.160): 56 data bytes
+64 bytes from 186.151.236.160: icmp_seq=0 ttl=59 time=7.843 ms
+64 bytes from 186.151.236.160: icmp_seq=1 ttl=59 time=7.932 ms
+64 bytes from 186.151.236.160: icmp_seq=2 ttl=59 time=8.010 ms
+</code></pre>
+
+<h3>Conclusion</h3>
+
+<p>The location of the DNS server does affect speed significantly when browsing, or in whatever activity in which domain name resolutions are involved.  Make sure that the DNS server you&rsquo;re using is actually close to you. Unless there are any restrictions by your ISP&rsquo;s DNS server, stick just with it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finally, no more double NAT from my ISP]]></title>
+    <link href="http://davidhsiehlo.com/blog/2013/12/20/finally/"/>
+    <updated>2013-12-20T23:05:52-06:00</updated>
+    <id>http://davidhsiehlo.com/blog/2013/12/20/finally</id>
+    <content type="html"><![CDATA[<p>A few years ago, after struggling with BitTorrent clients and online game servers closed port warning and error messages, I’ve been learning about DSL routing and computer networks. That’s when I realised that I would never be able to have an open port or a public IP address to my home network, because my network was behind an ATM Bridge.</p>
+
+<p>Having helped to setup some home networks to some family members, I ran some tests and apparently their DSL router had an actual dynamic public IP address, and were able to have open ports. PPPoE was the type of connection it showed after checking their DSL routers, and they actually had the same ISP. My deduction was that old internet users got stuck with IPoATM connections, and new users had PPPoE connections; it made sense, because when my home’s internet service was acquired, a technician was required to make the router configuration and installation, while new users just had to plug and play their line filters and DSL routers. Until few months ago my solution was to <a href="http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/">setup a SSH reverse tunnel to access my home network</a>, but with this, I don&rsquo;t need to anymore.</p>
+
+<p>Last week after noticing my internet connection was gone, I called to my ISP tech support, and it went like this:</p>
+
+<!-- more -->
+
+
+<blockquote><p><strong>Tech support guy:</strong> Hello […] how can I help you?</p>
+
+<p><strong>Me:</strong> I don&rsquo;t have internet connection.</p>
+
+<p><strong>Tech support guy:</strong> All right, let me check […]</p>
+
+<p><strong>Tech support guy:</strong> Sir, are you nearby the router?</p>
+
+<p><strong>Me:</strong> Yes&hellip; &ndash;_&ndash;</p></blockquote>
+
+<p>Here I was expecting to hear the <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=nn2FB1P_Mn8#t=10">“Have you tried to turn off and on again?”</a> and ping routine, and ready to tell him to just skip it, but that&rsquo;s not what happened:</p>
+
+<blockquote><p><strong>Tech support guy:</strong> Could you get a pointy object and use it to press the <em>reset button</em> located in the back of the router?</p></blockquote>
+
+<p>This is when I instantly thought about the possibility of having a infrastructure change of my internet connection</p>
+
+<p>After reseting the router, that was it, the IPoATM was gone, and the ISP pre flashed (not the factory default)
+PPPoE configuration was loaded. Dynamic public IP address check; externally reachable port forwarding check! Yeah! :)</p>
+
+<blockquote><p><strong>Me:</strong> Oh, it did work! Thanks :)</p></blockquote>
+
+<p>Having direct internet connection, I decided to use my WRT54GL router as my main DSL and network manager and use my ISP provided DSL router as a bridge. But right after selection the connection configuration on the DSL router’s web GUI, the bridge option wasn’t there, and actually the ISP PPPoE’s connection configuration was the only option. So far I was more than annoyed by my ISP’s restrictions, since I’ve been facing one after another. Searching on the web, I found out that <a href="http://www.boards.ie/vbulletin/showthread.php?p=63841326#post63841326">people that were facing the same problem solved it by upgrading their firmware to a newer generic version</a>. I used the firmware linked in <a href="http://www.boards.ie/vbulletin/showthread.php?p=63841326#post63841326">that post</a>, but instead of setting up a TFTP and BOOTP server as indicated, I downloaded and used the official setup wizard (for Windows only) <a href="http://download.modem-help.co.uk/mfcs-A/Alcatel/Modems/TG585/v7/Wizards/Setup/Windows/EN/">here</a>.</p>
+
+<p>With the new flashed generic firmware, everything went smoothly: I setup the DSL router to bridge mode, configured my WRT54GL <a href="http://www.polarcloud.com/tomato">Tomato’s firmware</a> to PPPoE mode, entering the connections user and password (my ISP, as you guessed doesn’t provide those, but it could be easily found out by using a <a href="http://stackoverflow.com/questions/1383142/show-password-as-text-control">password field shower script</a> before flashing the router), and done! :)</p>
+
+<p>All I did after was setup a <a href="http://www.noip.com">dynamic DNS account</a> and use it on Tomato’s client to automatically update a subdomain to the current non-static IP address.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bypassing a NAT/Firewall by reverse SSH Tunneling]]></title>
+    <link href="http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/"/>
+    <updated>2013-12-15T23:07:00-06:00</updated>
+    <id>http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling</id>
+    <content type="html"><![CDATA[<p>Not until last week, my ISP finally decided to change my home&rsquo;s internet connection from IPoATM to PPPoE, and giving me a more direct access to the internet, thus using my router’s NAT configuration.</p>
+
+<h2>The Problem</h2>
+
+<p>Before they made the changes, I had to struggle with server applications or having to figure out how to access my home’s pc while I was at somewhere else. The only benefit I had from this was having a somewhat more secure network, only those connected to the same ATM bridge would have access to my home network. Asking my ISP to setup a port forwarding to my modem wasn’t a choice, since they would just want to try to sell me a <em>public static IP service</em>.</p>
+
+<p><img class="center" src="/images/posts/ssh-reverse-tunneling/problem.png" title="&lsquo;The problem&rsquo; &lsquo;All incoming connections are blocked&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Using SSH Reverse Tunneling</h2>
+
+<p>Reading on the web I found out about reverse SSH tunnelling, which consists on creating a SSH connection from the destination machine behind the firewall to the source machine. Since an SSH connection was already open from the destination to the source, all it’s left is to connect through the same SSH connection.</p>
+
+<p>The solution would be as shown below.</p>
+
+<p><img class="center" src="/images/posts/ssh-reverse-tunneling/reverse-ssh.png" title="&lsquo;Reverse SSH Tunnel&rsquo; &lsquo;An incoming connection is made by forwarding it to the established outcoming connection &rsquo;" ></p>
+
+<p>First, the destination has to create an SSH connection to the source</p>
+
+<pre><code>$ ssh -R 1234:localhost:22 user@sourceHost
+</code></pre>
+
+<ul>
+<li>The <code>-R</code> option specifies port forwarding</li>
+<li><code>1234</code> is the port to listen to, it can be any unused port</li>
+<li><code>localhost</code> is the host in which the port will be forwarded to</li>
+<li><code>22</code> is the port to which the listening port connection will be forwarded to, in this case the default port in which the SSH connection is made</li>
+<li><code>user</code> is the username at the source machine</li>
+<li><code>sourceHost</code> is the source machine’s domain or IP Address</li>
+</ul>
+
+
+<p>So, here the port <code>1234</code> will be opened and listening at the remote machine, any connection made to this port will be forwarded to port <code>22</code> at the localhost through the SSH connection.</p>
+
+<p>This works, but in this case, but both the source and destination machines would have to be on 24/7 in order to keep this connect, which wouldn’t be that convenient at all.</p>
+
+<h2>My setup with Tomato and a VPS</h2>
+
+<p>I have a VPS accesible from anywhere, and a <a href="http://en.wikipedia.org/wiki/Linksys_WRT54G_series#WRT54GL%20router">WRT54GL</a> with <a href="http://www.polarcloud.com/tomato">Tomato firmware</a> at my home network which can access to my HomePC. Since both hosts do stay on 24/7 is possible to use them to keep an open SSH connection between them.</p>
+
+<p>So, including those to the equation, the solution setup would be:</p>
+
+<ul>
+<li> The router creates an SSH connection with port forwarding to the VPS</li>
+<li> When needed, from my laptop I can connect from anywhere to my VPS</li>
+<li> Then from the VPS, a reverse SSH tunnel is made from the listening port through the established connection</li>
+<li> From the router I can just Wake on LAN my Home PC, and access through another ssh connection o any other way.</li>
+</ul>
+
+
+<p><img class="center" src="/images/posts/ssh-reverse-tunneling/final-setup.png" title="&lsquo;Final setup&rsquo; &ldquo;My final setup using my home`s router and a VPS&rdquo;" ></p>
+
+<p>Because the router could be restarted once in a while, it would have to reconnect automatically after it’s up again, and that’s possible to do so with Tomato.</p>
+
+<p>First, I had to make sure that Tomato is able to create the SSH connection without authentication, to do so, the router’s rsa public key should be added to the VPS’s /etc/authorized_keys file.</p>
+
+<p>Keeping in mind that Tomato uses <a href="https://matt.ucc.asn.au/dropbear/dropbear.html">Dropbear</a> SSH client/server, and not OpenSSH, the command to generate the key’s would be:</p>
+
+<pre><code>$ dropbearkey -t rsa -f /jffs/rsa_key 
+</code></pre>
+
+<ul>
+<li>The option <code>-t</code> specifies the type of encryption, and <code>rsa</code> is the encoding we want</li>
+<li><code>-f /jffs/rsa_key</code> specifies the file in which the private key will be written to. Notice that I am creating it in the <code>/jffs</code> directory. <a href="http://tomatousb.org/doc:jffs">JFFS</a> is a mounted filesystem part of the router’s flash internal memory; because everything else outside is on RAM, we want it to persist.</li>
+</ul>
+
+
+<p>Once the keys are generated, the private will be written to the specified file and the public will be printed on the screen. This public key has to be placed inside the <code>/.ssh/authorized_keys</code> file on the VPS.</p>
+
+<p>After setting up the keys, we can test if it works by trying to connect from the router&rsquo;s command line:</p>
+
+<pre><code>$ ssh -y -f -N -i /jffs/rsa_key -R 1234:0.0.0.0:22 user@VPSHost
+</code></pre>
+
+<ul>
+<li>The <code>-y</code> option is to accept any remote host key. Since the .ssh/known_hosts file will always be lost after reboot, our VPS host would always be unknown</li>
+<li>The <code>-N</code> option to not specify a remote command (This is dropbear SSH, and by default it seems to be used mostly to run remote commands instead of keeping  an session)</li>
+<li>The <code>-i</code> option to use our identity file, our private key to authenticate. /jffs/rsa_key is the private key file.</li>
+<li>The <code>-R</code> to specify port forwarding</li>
+<li><code>1234</code> is the port to listen to, it can be any unused port</li>
+<li><code>0.0.0.0</code> is the host in which the port will be forwarded to, 0.0.0.0 is equal to <em>any</em> host, we can also replace this with the routers external IP address (which would be the same as the home PC’s IP address)</li>
+<li><code>22</code> is the port to which the 1234 port connection will be forwarded to</li>
+<li><code>user</code> is the username to use to login to the VPS</li>
+<li><code>VPSHost</code> is the VPS address</li>
+</ul>
+
+
+<p>If a remote session in the VPS opens, then it worked.</p>
+
+<p>Inside the Tomato web GUI, paste the above command to <em>Administration->Scripts->WanUp section</em>. This will make Tomato run open an SSH connection to the VPS once the internet connection is established after restarting.</p>
+
+<p>That’s it, now you can open a reverse SSH connection on the VPS by using the command</p>
+
+<pre><code> $ ssh user@localhost  -p 1234
+</code></pre>
+
+<p>Where <code>user</code> would be your router’s SSH user and <code>1234</code> the port you set to listen and forward.</p>
+
+<p>You can wake your PC inside your routers network with <em>ether-wake</em></p>
+
+<pre><code> $ ether-wake 00:11:22:33:44:55
+</code></pre>
+
+<p>Where <code>00:11:22:33:44:55</code> would be your PC&rsquo;s MAC address. For convenience, we can make Tomato to create a wake up script, paste the following line in <em>Administration->Scripts->Init</em> with the correct MAC address</p>
+
+<pre><code> $ echo "/usr/bin/ether-wake 00:1C:DF:32:AC:41" &gt; /home/root/wakeDesktopPC.sh 
+</code></pre>
+
+<p>Viola! All it takes now is to run the script with <code>./wakeDesktopPC.sh</code> and access your PC once it finishes booting up.</p>
+]]></content>
+  </entry>
+  
+</feed>

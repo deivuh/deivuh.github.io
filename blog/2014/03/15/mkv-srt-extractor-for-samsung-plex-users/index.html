@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>David Hsieh</title>
+  <title>MKV SRT Extractor for Samsung Plex users - David Hsieh</title>
   <meta name="author" content="David Hsieh">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://davidhsiehlo.com">
+  <link rel="canonical" href="http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="David Hsieh" type="application/atom+xml">
@@ -75,15 +75,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/">MKV SRT Extractor for Samsung Plex Users</a></h1>
+      <h1 class="entry-title">MKV SRT Extractor for Samsung Plex Users</h1>
     
     
       <p class="meta">
@@ -106,7 +103,7 @@
   </header>
 
 
-  <div class="entry-content"><p>After I finally built the <em>Gunpla</em> I got a couple years ago (Which I&rsquo;ll write about  later on). I felt more interested about the series, <a href="http://gundam.wikia.com/wiki/Mobile_Suit_Gundam_00">Gundam 00</a>.</p>
+<div class="entry-content"><p>After I finally built the <em>Gunpla</em> I got a couple years ago (Which I&rsquo;ll write about  later on). I felt more interested about the series, <a href="http://gundam.wikia.com/wiki/Mobile_Suit_Gundam_00">Gundam 00</a>.</p>
 
 <p>Since I watch most of the series and movies with <a href="https://plex.tv">Plex</a>, I set everything up was ready to watch it on the TV. The opening started to play, but there was something missing: The subs! Unless you understand Japanese, subtitles are essential.</p>
 
@@ -144,85 +141,16 @@ Since mkvextract is a command line tool, all I needed was to make a small bash s
 
 <p>Make sure to have both <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> and <a href="http://www.bunkus.org/videotools/mkvtoolnix/">MKVToolnix</a> installed</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/">Why Using Google DNS Wasn&#8217;t a Great Idea</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">David Hsieh</span></span>
 
-<time datetime="2014-01-29T18:51:31-06:00" pubdate data-updated="true">Jan 29<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><!-- ##Why setting up Google DNS as my router's default DNS server was a bad idea# -->
-
-
-<p>During the last couple of week of last month, I noticed delays while browsing the web, especially Reddit, up to the point that started to bug me. Was it because of the <a href="http://davidhsiehlo.com/blog/2013/12/20/finally/">recent change made by my ISP</a>? Or because I changed my Tomato router to manage my DSL connection?</p>
-
-<p>The first thing I did was a <a href="http://www.speedtest.net/my-result/3268882393">speed test</a>, but everything seemed to be normal, so it wasn&rsquo;t a speed issue. So the DNS server became my first suspect, since I setup my router to use Google DNS by default, both main and alternate server. But why would Google DNS server be slow? I thought.</p>
-
-<p>So I proceeded to make some tests:</p>
-
-<p>First, I ran a ping test to reddit.com domain:</p>
-
-<pre><code>➜  ~  ping www.reddit.com
-PING a659.b.akamai.net (165.254.57.144): 56 data bytes
-64 bytes from 65.120.60.171: icmp_seq=400 ttl=48 time=89.331 ms
-64 bytes from 65.120.60.171: icmp_seq=401 ttl=48 time=93.348 ms
-64 bytes from 65.120.60.171: icmp_seq=402 ttl=48 time=92.700 ms
-....
-64 bytes from 65.120.60.171: icmp_seq=755 ttl=48 time=360.952 ms
-64 bytes from 65.120.60.171: icmp_seq=756 ttl=48 time=284.577 ms
-64 bytes from 65.120.60.171: icmp_seq=757 ttl=48 time=201.729 ms
-</code></pre>
-
-<p>The average was about 90 ms, which is slow but acceptable; but there were times were it reached up to 360+ ms of latency! That&rsquo;s high enough to be noticeable when browsing.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/20/finally/">Finally, No More Double NAT From My ISP</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -234,120 +162,47 @@ PING a659.b.akamai.net (165.254.57.144): 56 data bytes
   
 
 
-<time datetime="2013-12-20T23:05:52-06:00" pubdate data-updated="true">Dec 20<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A few years ago, after struggling with BitTorrent clients and online game servers closed port warning and error messages, I’ve been learning about DSL routing and computer networks. That’s when I realised that I would never be able to have an open port or a public IP address to my home network, because my network was behind an ATM Bridge.</p>
-
-<p>Having helped to setup some home networks to some family members, I ran some tests and apparently their DSL router had an actual dynamic public IP address, and were able to have open ports. PPPoE was the type of connection it showed after checking their DSL routers, and they actually had the same ISP. My deduction was that old internet users got stuck with IPoATM connections, and new users had PPPoE connections; it made sense, because when my home’s internet service was acquired, a technician was required to make the router configuration and installation, while new users just had to plug and play their line filters and DSL routers. Until few months ago my solution was to <a href="http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/">setup a SSH reverse tunnel to access my home network</a>, but with this, I don&rsquo;t need to anymore.</p>
-
-<p>Last week after noticing my internet connection was gone, I called to my ISP tech support, and it went like this:</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/12/20/finally/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2014-03-15T23:51:25-06:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/">Bypassing a NAT/Firewall by Reverse SSH Tunneling</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/categories/media/'>media,</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/script/'>script,</a>
+  
+</span>
 
 
-<time datetime="2013-12-15T23:07:00-06:00" pubdate data-updated="true">Dec 15<span>th</span>, 2013</time>
-        
-      </p>
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>Not until last week, my ISP finally decided to change my home&rsquo;s internet connection from IPoATM to PPPoE, and giving me a more direct access to the internet, thus using my router’s NAT configuration.</p>
-
-<h2>The Problem</h2>
-
-<p>Before they made the changes, I had to struggle with server applications or having to figure out how to access my home’s pc while I was at somewhere else. The only benefit I had from this was having a somewhat more secure network, only those connected to the same ATM bridge would have access to my home network. Asking my ISP to setup a port forwarding to my modem wasn’t a choice, since they would just want to try to sell me a <em>public static IP service</em>.</p>
-
-<p><img class="center" src="/images/posts/ssh-reverse-tunneling/problem.png" title="The problem" alt="All incoming connections are blocked"></p>
-
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/" data-via="Deivuh" data-counturl="http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  
-    <article>
+    
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/10/hello-octopress/">Hello Octopress!</a></h1>
-    
-    
-      <p class="meta">
-        
+        <a class="basic-alignment left" href="/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/" title="Previous Post: Why using Google DNS wasn't a great idea">&laquo; Why using Google DNS wasn't a great idea</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-10T22:35:00-06:00" pubdate data-updated="true">Nov 10<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>Hello Octopress!</strong>
-Just migrated (or rather started over) to a new blogging platform: <a href="http://octopress.org">Octopress</a>.</p>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  
-  
+  </section>
 
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -359,7 +214,7 @@ Just migrated (or rather started over) to a new blogging platform: <a href="http
       </li>
     
       <li class="post">
-        <a href="/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/">Why using Google DNS wasn&#8217;t a great idea</a>
+        <a href="/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/">Why using Google DNS wasn't a great idea</a>
       </li>
     
       <li class="post">
@@ -380,7 +235,7 @@ Just migrated (or rather started over) to a new blogging platform: <a href="http
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/Deivuh">@Deivuh</a> on GitHub
@@ -422,6 +277,7 @@ Just migrated (or rather started over) to a new blogging platform: <a href="http
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -436,7 +292,10 @@ Just migrated (or rather started over) to a new blogging platform: <a href="http
       var disqus_shortname = 'davidhsiehlo';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/';
+        var disqus_url = 'http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

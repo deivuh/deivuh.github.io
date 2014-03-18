@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: media, | David Hsieh]]></title>
+  <link href="http://davidhsiehlo.com/blog/categories/media/atom.xml" rel="self"/>
+  <link href="http://davidhsiehlo.com/"/>
+  <updated>2014-03-17T21:26:52-06:00</updated>
+  <id>http://davidhsiehlo.com/</id>
+  <author>
+    <name><![CDATA[David Hsieh]]></name>
+    <email><![CDATA[me@davidhsiehlo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[MKV SRT Extractor for Samsung Plex users]]></title>
+    <link href="http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/"/>
+    <updated>2014-03-15T23:51:25-06:00</updated>
+    <id>http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users</id>
+    <content type="html"><![CDATA[<p>After I finally built the <em>Gunpla</em> I got a couple years ago (Which I&rsquo;ll write about  later on). I felt more interested about the series, <a href="http://gundam.wikia.com/wiki/Mobile_Suit_Gundam_00">Gundam 00</a>.</p>
+
+<p>Since I watch most of the series and movies with <a href="https://plex.tv">Plex</a>, I set everything up was ready to watch it on the TV. The opening started to play, but there was something missing: The subs! Unless you understand Japanese, subtitles are essential.</p>
+
+<p>Unable to start watching it I tried to figure out whether it was my TV&rsquo;s Plex client or the Plex Media server configuration. Searching on the web, I found out that the problem was that Samsung&rsquo;s Plex App doesn&rsquo;t support embedded subtitles (e.g. subtitles contained in a MKV container file).</p>
+
+<p>But subtitle files on the same root directory were supported, so what I had to do was to use two tools form <a href="http://www.bunkus.org/videotools/mkvtoolnix/">MKVtoolsnix</a>:</p>
+
+<ul>
+<li><p><strong><em>mkvinfo</em></strong> to identify the track inside the MKV containing the subtitles.</p></li>
+<li><p><strong><em>mkvextract</em></strong> to extract the subtitles from the identified track.
+Since mkvextract is a command line tool, all I needed was to make a small bash script to iterate and extract the subttiles file from each of the MKV files from the current directory:</p></li>
+</ul>
+
+
+<p>``` bash
+for file in *.mkv
+do</p>
+
+<pre><code>name=`echo $file | cut -f1 -d'.'`   
+mkvextract tracks "$file" TRACKNUMBER:"$name".ass
+</code></pre>
+
+<p>done
+```</p>
+
+<p>Even though each subtitle file was extracted and named the same as it&rsquo;s corresponding video file, problem persisted, the subtitle files were detected but not shown.</p>
+
+<p>It turns out that Samsung&rsquo;s Plex App only support <a href="http://www.matroska.org/technical/specs/subtitles/srt.html">SubRip Text (SRT)</a> files, and the subtitles contained on those MKVs are rich <a href="http://www.matroska.org/technical/specs/subtitles/ssa.html">SubStationAlpha (ASS/SSA)</a> subtitles.</p>
+
+<p>Apparently the support for both <em>SSA</em> subtitle files and embedded subtitles  were due to Samsung SDK restrictions.</p>
+
+<p>Having no success finding a proper <em>SSA</em> to <em>SRT</em> batch converter (for Linux or OSX), I made a little script to extract those SSA subtitles from the MKVs, and converting each of them into SRT format. You can get it <a href="https://github.com/deivuh/MKV-SRT-Extractor">here</a>.</p>
+
+<p>Make sure to have both <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> and <a href="http://www.bunkus.org/videotools/mkvtoolnix/">MKVToolnix</a> installed</p>
+]]></content>
+  </entry>
+  
+</feed>
