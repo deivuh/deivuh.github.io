@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bypassing a NAT/Firewall by Reverse SSH Tunneling"
+title: "Bypassing a NAT/Firewall by reverse SSH Tunneling"
 date: 2013-12-15 23:07
 comments: true
 categories: sysadmin notes how-to networks
@@ -15,7 +15,7 @@ Not until last week, my ISP finally decided to change my home's internet connect
 
 Before they made the changes, I had to struggle with server applications or having to figure out how to access my home’s pc while I was at somewhere else. The only benefit I had from this was having a somewhat more secure network, only those connected to the same ATM bridge would have access to my home network. Asking my ISP to setup a port forwarding to my modem wasn’t a choice, since they would just want to try to sell me a _public static IP service_.
 
-{% img /images/posts/ssh-reverse-tunneling/problem.png  'The problem' 'All incoming connections are blocked' %}
+{% img center /images/posts/ssh-reverse-tunneling/problem.png  'The problem' 'All incoming connections are blocked' %}
 
 <!-- more -->
 
@@ -27,7 +27,7 @@ Reading on the web I found out about reverse SSH tunnelling, which consists on c
 
 The solution would be as shown below.
 
-{% img right /images/posts/ssh-reverse-tunneling/reverse-ssh.png  'Reverse SSH Tunnel' 'An incoming connection is made by forwarding it to the established outcoming connection '%}
+{% img center /images/posts/ssh-reverse-tunneling/reverse-ssh.png  'Reverse SSH Tunnel' 'An incoming connection is made by forwarding it to the established outcoming connection '%}
 
 
 First, the destination has to create an SSH connection to the source 
@@ -61,7 +61,7 @@ So, including those to the equation, the solution setup would be:
    * From the router I can just Wake on LAN my Home PC, and access through another ssh connection o any other way.
 
 
-{% img right /images/posts/ssh-reverse-tunneling/final-setup.png  'Final setup' "My final setup using my home`s router and a VPS"%}
+{% img center /images/posts/ssh-reverse-tunneling/final-setup.png  'Final setup' "My final setup using my home`s router and a VPS"%}
 
 
 Because the router could be restarted once in a while, it would have to reconnect automatically after it’s up again, and that’s possible to do so with Tomato. 
