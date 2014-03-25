@@ -7,7 +7,8 @@ title: David Hsieh
 subtitle: Thoughts and notes about CS, tech and life
 author: David Hsieh
 simple_search: http://google.com/search
-description: desc
+description: David Hsieh's personal blog about tech and coding.
+keywords: tech, david, hsieh, blog, CS, coding, arduino, RPi, raspberry, pi, octopress, gunpla, gundam
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
