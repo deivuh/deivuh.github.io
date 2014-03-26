@@ -4,7 +4,7 @@
   <title><![CDATA[David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-03-24T21:44:28-06:00</updated>
+  <updated>2014-03-26T01:45:29-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dagr: A Time of the Day Based LED Lighting System]]></title>
+    <link href="http://davidhsiehlo.com/blog/2014/03/25/dagr-a-time-of-the-day-based-led-lighting-system/"/>
+    <updated>2014-03-25T01:52:03-06:00</updated>
+    <id>http://davidhsiehlo.com/blog/2014/03/25/dagr-a-time-of-the-day-based-led-lighting-system</id>
+    <content type="html"><![CDATA[<p>Because I tend to be more focused and productive at late night, I usually stay up late working on some stuff that needs to be done.</p>
+
+<p>Most of the time these stuff involves using my PC, and <a href="http://chriskresser.com/how-artificial-light-is-wrecking-your-sleep-and-what-to-do-about-it">staying up late in front of a screen messes up with our sleep</a>, as it <a href="http://www.webmd.com/sleep-disorders/news/20030620/nighttime-computer-users-may-lose-sleep">lowers our bodies melatonin production</a>. So unless I worked until I felt exhausted, there was no way I could fall asleep within 30 minutes of going to bed.</p>
+
+<p>That was before I discovered <a href="http://justgetflux.com">F.lux</a> a software that adapts your screen to the time of the day. Basically it decreases your screen <a href="http://en.wikipedia.org/wiki/Color_temperature">color temperature</a> at night, and becomes warmer the later at night it is.</p>
+
+<p><a href="(http://justgetflux.com">F.lux</a>  solves my watching the screen in the dark troubles, but when I needed to do stuff at my desk and not on the screen, all I had was my cool white desk lamp.</p>
+
+<h2>Dagr</h2>
+
+<p>Inspired by F.lux, I decided to make my own light system that changes the color temperature according to the time of the day.</p>
+
+<!-- more -->
+
+
+<p>So with an <a href="http://arduino.cc/en/Main/arduinoBoardUno">Arduino UNO</a>, a <a href="http://www.seeedstudio.com/depot/Bluetooth-40-Low-Energy-BLE-Shield-v20-p-1631.html">BLE shield</a>, a <a href="http://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html">Digital RGB LED strip</a>, and a 5V DC adapter to power the strip; I could make an Arduino controlled time-of-the-day based light system.</p>
+
+<p>I cut a strip with 7 LEDs, which was enough to cover a fairly small area just below a bunkbed, where my desk is. Because I haven&rsquo;t bought a case for my Arduino, I built one with some old Lego pieces I found few weeks ago, and used some plastic coated wire to hang it to the ceiling.</p>
+
+<p><span class='caption-wrapper'><img class='caption' src='http://davidhsiehlo.com/images/posts/dagr/Dagr.jpg' width='' height='' title='Temporal Lego case'><span class='caption-text'>Temporal Lego case</span></span></p>
+
+<h2>Controlling the light</h2>
+
+<p>The light color temperature can be set automatically according to the current time of your device, manually setting the <a href="http://en.wikipedia.org/wiki/Color_temperature">color temperature</a> from 1000K to 4000K, or manually setting the individual RGB values from the iOS app.</p>
+
+<p>The communication between the iOS app and the Arduino works between the mobile device&rsquo;s Bluetooth and the Arduino&rsquo;s BLE shield.</p>
+
+<p>The temperature to RGB conversion was made based on <a href="http://www.tannerhelland.com/4435/convert-temperature-rgb-algorithm-code/">Tanner Helland&rsquo;s algorithm</a> and the daytime based temperature algorithm was made based on my own preference, with three stages of temperature color change:</p>
+
+<ul>
+<li>6:00 AM to 8:00 AM</li>
+<li>6:00 PM to 8:00 PM</li>
+<li>8:00 PM to 10:00 PM</li>
+</ul>
+
+
+<p><span class='caption-wrapper'><img class='caption' src='http://davidhsiehlo.com/images/posts/dagr/DagrAction.jpg' width='' height='' title='Dagr in action in different modes above my desk'><span class='caption-text'>Dagr in action in different modes above my desk</span></span></p>
+
+<h2>Wrapping it up</h2>
+
+<p>With the stuff I mentioned and a few wires, you can have your own Dagr, time-of-the -day based lighting at your home or office.</p>
+
+<p>You can find the complete code of Dagr for both the iOS app and Arduino are at my repository:
+<a href="https://github.com/deivuh/dagr">https://github.com/deivuh/dagr</a>.</p>
+
+<p>Pull requests for functionality, success stories and comments are all welcome :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[MKV SRT Extractor for Samsung Plex users]]></title>

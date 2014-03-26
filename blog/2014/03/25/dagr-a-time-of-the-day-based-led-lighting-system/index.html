@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>About me - David Hsieh</title>
+  <title>Dagr: A Time of the Day Based LED Lighting System - David Hsieh</title>
   <meta name="author" content="David Hsieh">
 
 
-<meta name="description" content="About Me Nov 11th, 2013 I&rsquo;m a freelance software developer, experienced in mobile app development. Nov 11th, 2013 Tweet Comments Please enable &hellip;">
+<meta name="description" content="Because I tend to be more focused and productive at late night, I usually stay up late working on some stuff that needs to be done. Most of the time &hellip;">
 
 
 
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://davidhsiehlo.com/about-me">
+  <link rel="canonical" href="http://davidhsiehlo.com/blog/2014/03/25/dagr-a-time-of-the-day-based-led-lighting-system">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="David Hsieh" type="application/atom+xml">
@@ -77,32 +77,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">About Me</h1>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-11T10:11:00-06:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time></p>
-  </header>
-  
-  <p>I&rsquo;m a freelance software developer, experienced in mobile app development.</p>
-
-  
-    <footer>
+    
+      <h1 class="entry-title">Dagr: A Time of the Day Based LED Lighting System</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
@@ -114,13 +97,96 @@
   
 
 
-<time datetime="2013-11-11T10:11:00-06:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
+<time datetime="2014-03-25T01:52:03-06:00" pubdate data-updated="true">Mar 25<span>th</span>, 2014</time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Because I tend to be more focused and productive at late night, I usually stay up late working on some stuff that needs to be done.</p>
+
+<p>Most of the time these stuff involves using my PC, and <a href="http://chriskresser.com/how-artificial-light-is-wrecking-your-sleep-and-what-to-do-about-it">staying up late in front of a screen messes up with our sleep</a>, as it <a href="http://www.webmd.com/sleep-disorders/news/20030620/nighttime-computer-users-may-lose-sleep">lowers our bodies melatonin production</a>. So unless I worked until I felt exhausted, there was no way I could fall asleep within 30 minutes of going to bed.</p>
+
+<p>That was before I discovered <a href="http://justgetflux.com">F.lux</a> a software that adapts your screen to the time of the day. Basically it decreases your screen <a href="http://en.wikipedia.org/wiki/Color_temperature">color temperature</a> at night, and becomes warmer the later at night it is.</p>
+
+<p><a href="(http://justgetflux.com">F.lux</a>  solves my watching the screen in the dark troubles, but when I needed to do stuff at my desk and not on the screen, all I had was my cool white desk lamp.</p>
+
+<h2>Dagr</h2>
+
+<p>Inspired by F.lux, I decided to make my own light system that changes the color temperature according to the time of the day.</p>
+
+<!-- more -->
+
+
+<p>So with an <a href="http://arduino.cc/en/Main/arduinoBoardUno">Arduino UNO</a>, a <a href="http://www.seeedstudio.com/depot/Bluetooth-40-Low-Energy-BLE-Shield-v20-p-1631.html">BLE shield</a>, a <a href="http://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html">Digital RGB LED strip</a>, and a 5V DC adapter to power the strip; I could make an Arduino controlled time-of-the-day based light system.</p>
+
+<p>I cut a strip with 7 LEDs, which was enough to cover a fairly small area just below a bunkbed, where my desk is. Because I haven&rsquo;t bought a case for my Arduino, I built one with some old Lego pieces I found few weeks ago, and used some plastic coated wire to hang it to the ceiling.</p>
+
+<p><span class='caption-wrapper'><img class='caption' src='/images/posts/dagr/Dagr.jpg' width='' height='' title='Temporal Lego case'><span class='caption-text'>Temporal Lego case</span></span></p>
+
+<h2>Controlling the light</h2>
+
+<p>The light color temperature can be set automatically according to the current time of your device, manually setting the <a href="http://en.wikipedia.org/wiki/Color_temperature">color temperature</a> from 1000K to 4000K, or manually setting the individual RGB values from the iOS app.</p>
+
+<p>The communication between the iOS app and the Arduino works between the mobile device&rsquo;s Bluetooth and the Arduino&rsquo;s BLE shield.</p>
+
+<p>The temperature to RGB conversion was made based on <a href="http://www.tannerhelland.com/4435/convert-temperature-rgb-algorithm-code/">Tanner Helland&rsquo;s algorithm</a> and the daytime based temperature algorithm was made based on my own preference, with three stages of temperature color change:</p>
+
+<ul>
+<li>6:00 AM to 8:00 AM</li>
+<li>6:00 PM to 8:00 PM</li>
+<li>8:00 PM to 10:00 PM</li>
+</ul>
+
+
+<p><span class='caption-wrapper'><img class='caption' src='/images/posts/dagr/DagrAction.jpg' width='' height='' title='Dagr in action in different modes above my desk'><span class='caption-text'>Dagr in action in different modes above my desk</span></span></p>
+
+<h2>Wrapping it up</h2>
+
+<p>With the stuff I mentioned and a few wires, you can have your own Dagr, time-of-the -day based lighting at your home or office.</p>
+
+<p>You can find the complete code of Dagr for both the iOS app and Arduino are at my repository:
+<a href="https://github.com/deivuh/dagr">https://github.com/deivuh/dagr</a>.</p>
+
+<p>Pull requests for functionality, success stories and comments are all welcome :)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://davidhsiehlo.com/about-me/index.html" data-via="Deivuh" data-counturl="http://davidhsiehlo.com/about-me/index.html" >Tweet</a>
+
+<span class="byline author vcard">Posted by <span class="fn">David Hsieh</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-25T01:52:03-06:00" pubdate data-updated="true">Mar 25<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/arduino/'>arduino</a>, <a class='category' href='/blog/categories/cs/'>cs</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>, <a class='category' href='/blog/categories/tech/'>tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://davidhsiehlo.com/blog/2014/03/25/dagr-a-time-of-the-day-based-led-lighting-system/" data-via="Deivuh" data-counturl="http://davidhsiehlo.com/blog/2014/03/25/dagr-a-time-of-the-day-based-led-lighting-system/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -128,9 +194,14 @@
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/" title="Previous Post: MKV SRT Extractor for Samsung Plex users">&laquo; MKV SRT Extractor for Samsung Plex users</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
   <section>
@@ -232,8 +303,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://davidhsiehlo.com/about-me/index.html';
-        var disqus_url = 'http://davidhsiehlo.com/about-me/index.html';
+        var disqus_identifier = 'http://davidhsiehlo.com/blog/2014/03/25/dagr-a-time-of-the-day-based-led-lighting-system/';
+        var disqus_url = 'http://davidhsiehlo.com/blog/2014/03/25/dagr-a-time-of-the-day-based-led-lighting-system/';
         var disqus_script = 'embed.js';
       
     (function () {
