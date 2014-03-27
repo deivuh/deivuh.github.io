@@ -11,7 +11,7 @@ Because I tend to be more focused and productive at late night, I usually stay u
 
 Most of the time these stuff involves using my PC, and [staying up late in front of a screen messes up with our sleep](http://chriskresser.com/how-artificial-light-is-wrecking-your-sleep-and-what-to-do-about-it), as it [lowers our bodies melatonin production](http://www.webmd.com/sleep-disorders/news/20030620/nighttime-computer-users-may-lose-sleep). So unless I worked until I felt exhausted, there was no way I could fall asleep within 30 minutes of going to bed.
 
-That was before I discovered [F.lux](http://justgetflux.com) a software that adapts your screen to the time of the day. Basically it decreases your screen [color temperature](http://en.wikipedia.org/wiki/Color_temperature) at night, and becomes warmer the later at night it is. 
+That was before I discovered [F.lux](http://justgetflux.com) a software that adapts your screen to the time of the day. Basically it decreases your screen [color temperature](http://en.wikipedia.org/wiki/Color_temperature) at night, and becomes warmer the later at night it is. On their website they even have [more information and a collection of links to research documents about light exposure effects on sleeping](http://justgetflux.com/research.html). 
 
 [F.lux]((http://justgetflux.com)  solves my watching the screen in the dark troubles, but when I needed to do stuff at my desk and not on the screen, all I had was my cool white desk lamp.
 
