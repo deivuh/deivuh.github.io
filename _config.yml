@@ -98,8 +98,8 @@ disqus_show_comment_count: false
 google_analytics_tracking_id: UA-28834638-3
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
 
 # Addthis
-addthis_button: true
+addthis_button: false
 addthis_profile_id: ra-52818cf269d88815
