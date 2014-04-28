@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: digitalocean, | David Hsieh]]></title>
+  <title><![CDATA[Category: digitalocean | David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/blog/categories/digitalocean/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-04-28T01:26:14-06:00</updated>
+  <updated>2014-04-28T10:25:00-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -37,6 +37,10 @@
 <p>This app works but is still under development, but for those who want to try it or start using it, you can <a href="http://bit.ly/QOpaBs">download the app file</a>.</p>
 
 <p>The source code is at my <a href="https://github.com/deivuh/DODropletManager-OSX">Github repository</a>, for those willing to contribute or just look at it.</p>
+
+<h3>Update</h3>
+
+<p>It seems to be that everyone has different clientID and API key lengths. I guess it was a wrong assumption, I just fixed it and recompiled <a href="http://bit.ly/QOpaBs">the app file</a>.</p>
 ]]></content>
   </entry>
   
