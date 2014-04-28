@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-04-28T10:25:00-06:00</updated>
+  <updated>2014-04-28T11:53:10-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -41,6 +41,10 @@
 <h3>Update</h3>
 
 <p>It seems to be that everyone has different clientID and API key lengths. I guess it was a wrong assumption, I just fixed it and recompiled <a href="http://bit.ly/QOpaBs">the app file</a>.</p>
+
+<h3>Update #2</h3>
+
+<p>There was another issue regarding it only updating the first droplet. Fixed it.</p>
 ]]></content>
   </entry>
   
