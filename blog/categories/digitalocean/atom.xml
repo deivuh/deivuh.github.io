@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: digitalocean, | David Hsieh]]></title>
+  <link href="http://davidhsiehlo.com/blog/categories/digitalocean/atom.xml" rel="self"/>
+  <link href="http://davidhsiehlo.com/"/>
+  <updated>2014-04-28T01:26:14-06:00</updated>
+  <id>http://davidhsiehlo.com/</id>
+  <author>
+    <name><![CDATA[David Hsieh]]></name>
+    <email><![CDATA[me@davidhsiehlo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[DigitalOcean Droplets Manager for OSX]]></title>
+    <link href="http://davidhsiehlo.com/blog/2014/04/27/digitalocean-droplets-manager-OSX/"/>
+    <updated>2014-04-27T23:55:37-06:00</updated>
+    <id>http://davidhsiehlo.com/blog/2014/04/27/digitalocean-droplets-manager-OSX</id>
+    <content type="html"><![CDATA[<p>A couple days ago, browsing the web, I came across this<a href="http://blog.andrewsomething.com/2014/04/25/digitalocean-indicator-release/">DigitalOcean Indicator</a> made by <a href="http://blog.andrewsomething.com">Andrewsomething</a>. Which manages <a href="https://www.digitalocean.com">DigitalOcean</a> droplets easily from right Ubuntu&rsquo;s panel.</p>
+
+<p>Because I&rsquo;ve got droplets to manage, and there was no OSX version for such a handy tool, I decided to make an OSX version of it.</p>
+
+<p><img class="center" src="/images/posts/DODropletsManager/screenshot.png" title="Droplets Manager" ></p>
+
+<p>So far, the manager does the following:</p>
+
+<ul>
+<li>List droplets</li>
+<li>Show each droplets status, IP address, distro and region</li>
+<li>Copy droplet&rsquo;s IP address to clipboard</li>
+<li>Reboot, shutdown and power on droplets</li>
+</ul>
+
+
+<p>This app works but is still under development, but for those who want to try it or start using it, you can <a href="http://bit.ly/QOpaBs">download the app file</a>.</p>
+
+<p>The source code is at my <a href="https://github.com/deivuh/DODropletManager-OSX">Github repository</a>, for those willing to contribute or just look at it.</p>
+]]></content>
+  </entry>
+  
+</feed>
