@@ -21,13 +21,9 @@ So far, the manager does the following:
  - Reboot, shutdown and power on droplets
 
 
-This app works but is still under development, but for those who want to try it or start using it, you can [download the app file](http://bit.ly/QOpaBs).
+This app works but is still under development, but for those who want to try it or start using it, ~~you can [download the app file](http://bit.ly/QOpaBs)~~ (See update).
 
 The source code is at my [Github repository](https://github.com/deivuh/DODropletManager-OSX), for those willing to contribute or just look at it.
 
 ###Update
-It seems to be that everyone has different clientID and API key lengths. I guess it was a wrong assumption, I just fixed it and recompiled [the app file](http://bit.ly/QOpaBs). 
-
-
-###Update #2
-There was another issue regarding it only updating the first droplet. Fixed it.
+There have been quite a few contributions, and thanks to them, the app is growing quite fast :). For .app build releases, please visit [The repository's release section](https://github.com/deivuh/DODropletManager-OSX/releases) to download them. 
