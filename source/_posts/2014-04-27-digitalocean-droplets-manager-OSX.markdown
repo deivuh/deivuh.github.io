@@ -3,11 +3,11 @@ layout: post
 title: "DigitalOcean Droplets Manager for OSX"
 date: 2014-04-27 23:55:37 -0600
 comments: true
-categories: osx, cocoa, digitalocean, github
+categories: osx cocoa digitalocean github
 ---
 
 
-A couple days ago, browsing the web, I came across this[DigitalOcean Indicator](http://blog.andrewsomething.com/2014/04/25/digitalocean-indicator-release/) made by [Andrewsomething](http://blog.andrewsomething.com). Which manages [DigitalOcean](https://www.digitalocean.com) droplets easily from right Ubuntu's panel.
+A couple days ago, browsing the web, I came across this [DigitalOcean Indicator](http://blog.andrewsomething.com/2014/04/25/digitalocean-indicator-release/) made by [Andrewsomething](http://blog.andrewsomething.com). Which manages [DigitalOcean](https://www.digitalocean.com) droplets easily from right Ubuntu's panel.
 
 Because I've got droplets to manage, and there was no OSX version for such a handy tool, I decided to make an OSX version of it.
 
@@ -24,3 +24,10 @@ So far, the manager does the following:
 This app works but is still under development, but for those who want to try it or start using it, you can [download the app file](http://bit.ly/QOpaBs).
 
 The source code is at my [Github repository](https://github.com/deivuh/DODropletManager-OSX), for those willing to contribute or just look at it.
+
+###Update
+It seems to be that everyone has different clientID and API key lengths. I guess it was a wrong assumption, I just fixed it and recompiled [the app file](http://bit.ly/QOpaBs). 
+
+
+###Update #2
+There was another issue regarding it only updating the first droplet. Fixed it.
