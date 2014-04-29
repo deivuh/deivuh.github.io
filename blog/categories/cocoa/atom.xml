@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cocoa | David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/blog/categories/cocoa/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-04-28T11:53:10-06:00</updated>
+  <updated>2014-04-28T21:52:35-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -18,7 +18,7 @@
     <link href="http://davidhsiehlo.com/blog/2014/04/27/digitalocean-droplets-manager-OSX/"/>
     <updated>2014-04-27T23:55:37-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2014/04/27/digitalocean-droplets-manager-OSX</id>
-    <content type="html"><![CDATA[<p>A couple days ago, browsing the web, I came across this<a href="http://blog.andrewsomething.com/2014/04/25/digitalocean-indicator-release/">DigitalOcean Indicator</a> made by <a href="http://blog.andrewsomething.com">Andrewsomething</a>. Which manages <a href="https://www.digitalocean.com">DigitalOcean</a> droplets easily from right Ubuntu&rsquo;s panel.</p>
+    <content type="html"><![CDATA[<p>A couple days ago, browsing the web, I came across this <a href="http://blog.andrewsomething.com/2014/04/25/digitalocean-indicator-release/">DigitalOcean Indicator</a> made by <a href="http://blog.andrewsomething.com">Andrewsomething</a>. Which manages <a href="https://www.digitalocean.com">DigitalOcean</a> droplets easily from right Ubuntu&rsquo;s panel.</p>
 
 <p>Because I&rsquo;ve got droplets to manage, and there was no OSX version for such a handy tool, I decided to make an OSX version of it.</p>
 
