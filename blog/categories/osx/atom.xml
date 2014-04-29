@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-04-28T21:52:35-06:00</updated>
+  <updated>2014-04-29T16:57:58-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -34,17 +34,13 @@
 </ul>
 
 
-<p>This app works but is still under development, but for those who want to try it or start using it, you can <a href="http://bit.ly/QOpaBs">download the app file</a>.</p>
+<p>This app works but is still under development, but for those who want to try it or start using it, <del>you can <a href="http://bit.ly/QOpaBs">download the app file</a></del> (See update).</p>
 
 <p>The source code is at my <a href="https://github.com/deivuh/DODropletManager-OSX">Github repository</a>, for those willing to contribute or just look at it.</p>
 
 <h3>Update</h3>
 
-<p>It seems to be that everyone has different clientID and API key lengths. I guess it was a wrong assumption, I just fixed it and recompiled <a href="http://bit.ly/QOpaBs">the app file</a>.</p>
-
-<h3>Update #2</h3>
-
-<p>There was another issue regarding it only updating the first droplet. Fixed it.</p>
+<p>There have been quite a few contributions, and thanks to them, the app is growing quite fast :). For .app build releases, please visit <a href="https://github.com/deivuh/DODropletManager-OSX/releases">The repository&rsquo;s release section</a> to download them.</p>
 ]]></content>
   </entry>
   
