@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: networks | David Hsieh]]></title>
+  <title><![CDATA[Category: Networks | David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/blog/categories/networks/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-04-29T16:57:58-06:00</updated>
+  <updated>2014-09-15T01:01:58-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Why using Google DNS wasn't a great idea]]></title>
+    <title type="html"><![CDATA[Why Using Google DNS Wasn't a Great Idea]]></title>
     <link href="http://davidhsiehlo.com/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/"/>
     <updated>2014-01-29T18:51:31-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2014/01/29/why-using-google-dns-wasnt-great-idea</id>
@@ -106,7 +106,7 @@ PING a659.b.akamai.net (186.151.236.160): 56 data bytes
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Finally, no more double NAT from my ISP]]></title>
+    <title type="html"><![CDATA[Finally, No More Double NAT From My ISP]]></title>
     <link href="http://davidhsiehlo.com/blog/2013/12/20/finally/"/>
     <updated>2013-12-20T23:05:52-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2013/12/20/finally</id>
@@ -149,7 +149,7 @@ PPPoE configuration was loaded. Dynamic public IP address check; externally reac
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Bypassing a NAT/Firewall by reverse SSH Tunneling]]></title>
+    <title type="html"><![CDATA[Bypassing a NAT/Firewall by Reverse SSH Tunneling]]></title>
     <link href="http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/"/>
     <updated>2013-12-15T23:07:00-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling</id>

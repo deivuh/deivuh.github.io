@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: how-to | David Hsieh]]></title>
+  <title><![CDATA[Category: How-to | David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/blog/categories/how-to/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-04-29T16:57:58-06:00</updated>
+  <updated>2014-09-15T01:01:58-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bypassing a NAT/Firewall by reverse SSH Tunneling]]></title>
+    <title type="html"><![CDATA[Bypassing a NAT/Firewall by Reverse SSH Tunneling]]></title>
     <link href="http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/"/>
     <updated>2013-12-15T23:07:00-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling</id>

@@ -4,7 +4,7 @@
   <title><![CDATA[David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-04-29T16:57:58-06:00</updated>
+  <updated>2014-09-15T01:01:58-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ship It! Things I Learned in the Process of Shipping My App]]></title>
+    <link href="http://davidhsiehlo.com/blog/2014/09/13/ship-it-things-i-learned-in-the-process-of-shipping-my-app/"/>
+    <updated>2014-09-13T20:09:36-06:00</updated>
+    <id>http://davidhsiehlo.com/blog/2014/09/13/ship-it-things-i-learned-in-the-process-of-shipping-my-app</id>
+    <content type="html"><![CDATA[<p>Most of us have  probably come up with a cool idea for an app at one time or another: the app that no one else seems to have come up with, or just an app that we believe that everyone needs. Some of us just let the idea pass, while others, inspired by that idea, proceed to brainstorm, plan and start building that app.</p>
+
+<p>Months later, while some have published their app, the rest of us have probably <del>stalled</del> abandoned the project, or let it fall to the bottom of the list of our priorities, and started working on another idea. Rinse and repeat.</p>
+
+<p>Even though I usually don’t have problems delivering projects to clients, I do struggle delivering my own projects. Why? Because it’s my own project, and we developers tend to be perfectionists when we are talking about making our own product. By being perfectionists, I mean that we never stop looking to add more features to our project, or ditching what we have done because we just found out that there are better ways to do it.</p>
+
+<p>By getting my <del>first</del> personal app, <a href="https://itunes.apple.com/us/app/twenty-one-form-new-habits/id903695313?mt=8">TwentyOne</a>, published on the App Store, I learned some important things to consider when working on a personal project.</p>
+
+<!-- more -->
+
+
+<h2>1. Focus on what you are working on, write down everything else</h2>
+
+<p>If you have already started on one project, and come up with an idea for yet another project, write it down and keep working. Keep a list of all your projects. You will probably come up with more ideas for those projects, so just write it all down, and when you have finished the on you have been working on, you’ll have a list of more matured and developed ideas, making them way easier to start with.</p>
+
+<p>What I do, is to keep all my notes and ideas collected on <a href="http://www.evernote.com">Evernote</a>, I usually write every raw idea on a single document and create a new document for a project once I start planning and working on it.</p>
+
+<h2>2. Manage version releases</h2>
+
+<p>While we are building our project, we will probably come up with more ideas, more features for it. If you aim to implement all the features you come up with for your first release, your motivation will probably wane before you get to release it.</p>
+
+<p>When I was working on  <a href="https://itunes.apple.com/us/app/twenty-one-form-new-habits/id903695313?mt=8">TwentyOne</a>, I came up with lots of features that would be cool to implement. If I decided to implement each of them for the first release, it wouldn’t be on the App Store right now, and would have probably kept dragging on, and never seen the light of day. Instead, I decided to cut off the extra features, and focus on its main functionality.</p>
+
+<p>Plan the extra features for the next release, and focus on your project’s core functionality: quality over quantity. Then reconsider those features once you have released the first version. You might even realize that you saved the time and trouble as they might never been worth it.</p>
+
+<h2>3. Take advantage of your initial motivation</h2>
+
+<p>While I was working on <a href="https://itunes.apple.com/us/app/twenty-one-form-new-habits/id903695313?mt=8">TwentyOne</a>, I realized that I had the habit of focusing too much on visuals first, because it gave me a more tangible but false feedback of my progress and gave me a false sensation of reaching the final product faster.</p>
+
+<p>Motivation tends to fall over time, so take advantage when you are full of it, and work on the core, that stuff will probably take longer to work on, and leave that gratification for the end, when you will need it the most to finish.</p>
+
+<h2>4. Get feedback</h2>
+
+<p>The earlier you ask for feedback, the better. And don’t just ask for feedback from anyone, make sure it’s from people who are having the problem you want to solve with your project. By getting feedback you know if you are going in the right direction.</p>
+
+<h2>5. Get the most of it, even if you don’t finish it</h2>
+
+<p>Besides gaining the experience, you can get other things from your finished or unfinished project:</p>
+
+<ul>
+<li><p>Make a module out of one feature of your project, it might be handy later on. If you are willing to share, open source it and share it on <a href="http://www.github.com],%20because%20someone%20else%20might%20be%20looking%20to%20do%20something%20similar,%20and%20might%20even%20improve%20it%20.%20I%20did%20this%20with%20the%20animated%20sliding%20table%20cells%20that%20I%20built%20on%20[TwentyOne](https://itunes.apple.com/us/app/twenty-one-form-new-habits/id903695313?mt=8">Github</a>; <a href="https://github.com/deivuh/DHSlidingCell">you can find the repository here</a>.</p></li>
+<li><p>If you believe that you might never finish your project for whatever reason, consider open sourcing it if you haven’t. People that are interested in your idea will contribute to it, and your project might actually see the light of day instead of falling into oblivion.</p></li>
+</ul>
+
+
+<p>So, these were some of the lessons I learned on finishing and shipping an idea. Have you ever struggled on getting a side project done? How was your experience?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DigitalOcean Droplets Manager for OSX]]></title>
@@ -99,7 +153,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[MKV SRT Extractor for Samsung Plex users]]></title>
+    <title type="html"><![CDATA[MKV SRT Extractor for Samsung Plex Users]]></title>
     <link href="http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/"/>
     <updated>2014-03-15T23:51:25-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users</id>
@@ -146,7 +200,7 @@ Since mkvextract is a command line tool, all I needed was to make a small bash s
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Why using Google DNS wasn't a great idea]]></title>
+    <title type="html"><![CDATA[Why Using Google DNS Wasn't a Great Idea]]></title>
     <link href="http://davidhsiehlo.com/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/"/>
     <updated>2014-01-29T18:51:31-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2014/01/29/why-using-google-dns-wasnt-great-idea</id>
@@ -238,7 +292,7 @@ PING a659.b.akamai.net (186.151.236.160): 56 data bytes
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Finally, no more double NAT from my ISP]]></title>
+    <title type="html"><![CDATA[Finally, No More Double NAT From My ISP]]></title>
     <link href="http://davidhsiehlo.com/blog/2013/12/20/finally/"/>
     <updated>2013-12-20T23:05:52-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2013/12/20/finally</id>
@@ -281,7 +335,7 @@ PPPoE configuration was loaded. Dynamic public IP address check; externally reac
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Bypassing a NAT/Firewall by reverse SSH Tunneling]]></title>
+    <title type="html"><![CDATA[Bypassing a NAT/Firewall by Reverse SSH Tunneling]]></title>
     <link href="http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/"/>
     <updated>2013-12-15T23:07:00-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling</id>

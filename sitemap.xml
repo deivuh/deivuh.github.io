@@ -2,52 +2,58 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://davidhsiehlo.com/blog/2013/11/10/hello-octopress/</loc>
-        <lastmod>2014-03-15T23:51:00-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://davidhsiehlo.com/blog/2013/12/15/bypassing-a-nat-slash-firewall-by-reverse-ssh-tunneling/
         </loc>
-        <lastmod>2014-03-26T00:33:14-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
     </url>
     <url>
         <loc>http://davidhsiehlo.com/blog/2013/12/20/finally/</loc>
-        <lastmod>2014-03-15T23:50:59-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
     </url>
     <url>
         <loc>http://davidhsiehlo.com/blog/2014/01/29/why-using-google-dns-wasnt-great-idea/</loc>
-        <lastmod>2014-03-15T23:50:57-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/
         </loc>
-        <lastmod>2014-03-18T09:55:21-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://davidhsiehlo.com/blog/2014/03/25/dagr-a-time-of-the-day-based-led-lighting-system/
         </loc>
-        <lastmod>2014-03-27T00:56:17-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
     </url>
     <url>
         <loc>http://davidhsiehlo.com/blog/2014/04/27/digitalocean-droplets-manager-OSX/</loc>
-        <lastmod>2014-04-29T16:57:27-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://davidhsiehlo.com/blog/2014/09/13/ship-it-things-i-learned-in-the-process-of-shipping-my-app/
+        </loc>
+        <lastmod>2014-09-15T01:01:57-06:00</lastmod>
     </url>
     <url>
         <loc>http://davidhsiehlo.com/about-me/</loc>
-        <lastmod>2014-02-20T00:30:35-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
     </url>
     <url>
         <loc>http://davidhsiehlo.com/blog/archives/</loc>
-        <lastmod>2014-04-29T16:57:27-06:00</lastmod>
+        <lastmod>2014-09-15T01:01:57-06:00</lastmod>
     </url>
     <url>
         <loc>http://davidhsiehlo.com/</loc>
-        <lastmod>2014-04-29T16:57:27-06:00</lastmod>
+        <lastmod>2014-09-15T01:01:57-06:00</lastmod>
     </url>
     <url>
         <loc>http://davidhsiehlo.com/robots.txt</loc>
-        <lastmod>2014-02-20T00:30:35-06:00</lastmod>
+        <lastmod>2014-09-13T20:06:58-06:00</lastmod>
     </url>
 </urlset>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: script | David Hsieh]]></title>
+  <title><![CDATA[Category: Script | David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/blog/categories/script/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-04-29T16:57:58-06:00</updated>
+  <updated>2014-09-15T01:01:58-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[MKV SRT Extractor for Samsung Plex users]]></title>
+    <title type="html"><![CDATA[MKV SRT Extractor for Samsung Plex Users]]></title>
     <link href="http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users/"/>
     <updated>2014-03-15T23:51:25-06:00</updated>
     <id>http://davidhsiehlo.com/blog/2014/03/15/mkv-srt-extractor-for-samsung-plex-users</id>
