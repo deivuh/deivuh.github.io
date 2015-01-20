@@ -4,7 +4,7 @@
   <title><![CDATA[David Hsieh]]></title>
   <link href="http://davidhsiehlo.com/atom.xml" rel="self"/>
   <link href="http://davidhsiehlo.com/"/>
-  <updated>2014-09-15T02:23:30-06:00</updated>
+  <updated>2015-01-20T08:11:38-06:00</updated>
   <id>http://davidhsiehlo.com/</id>
   <author>
     <name><![CDATA[David Hsieh]]></name>
@@ -12,6 +12,114 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Look Back at 2014]]></title>
+    <link href="http://davidhsiehlo.com/blog/2015/01/19/a-look-back-at-2014/"/>
+    <updated>2015-01-19T21:48:44-06:00</updated>
+    <id>http://davidhsiehlo.com/blog/2015/01/19/a-look-back-at-2014</id>
+    <content type="html"><![CDATA[<p>Here&rsquo;s a list of some of the things I discovered or accomplished in 2014 in no particular order:</p>
+
+<!-- more -->
+
+
+<h2>Books read</h2>
+
+<ul>
+<li><a href="http://www.amazon.com/Guide-Good-Life-Ancient-Stoic/dp/0195374614/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1421587969&amp;sr=1-1&amp;keywords=stoicism">A Guide to the Good Life: The Ancient Art of Stoic Joy</a> &ndash; A great introduction to Stoicism</li>
+<li><a href="http://www.amazon.com/gp/product/0578012812/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0578012812&amp;linkCode=as2&amp;tag=dahslo-20&amp;linkId=5AJB2CTPLRBSZJXD">Getting Real</a> &ndash; A book by the founders of 37signals. Great advice on developing and shipping your startup product.</li>
+<li><a href="http://www.amazon.com/gp/product/0307463745/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0307463745&amp;linkCode=as2&amp;tag=dahslo-20&amp;linkId=355STMSOOC63GARN">Rework</a> &ndash; Another book by the founders of 37signals. Has similar contents as <em>Getting Real</em>, I&rsquo;d recommend skipping <em>Getting Real</em> and reading this one.</li>
+<li><a href="http://www.amazon.com/gp/product/0804137501/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0804137501&amp;linkCode=as2&amp;tag=dahslo-20&amp;linkId=BVMVID2T7Z4VAKZW">Remote: Office Not Required</a> &ndash; The last book yet released by the founders of 37signals. As the title suggests, explains the benefits of and how to work remotely.</li>
+<li><a href="http://www.amazon.com/gp/product/0804139296/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0804139296&amp;linkCode=as2&amp;tag=dahslo-20&amp;linkId=NJFATBBCEEGJO2H5">Zero to One: Notes on Startups, or How to Build the Future</a> &ndash; By the cofounder and investor Peter Thiel and his former student Blake Masters. A must read for anyone interested in enterpreneurship and startups.</li>
+<li><a href="http://www.amazon.com/Fortune-Cookie-Principle-great-business/dp/1489583947/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1421587891&amp;sr=1-1&amp;keywords=cookie+fortune+principle">The Fortune Cookie Principle: The 20 keys to a great brand story and why your business needs one</a> &ndash; A book with great ideas about PR &amp; marketing, in which the author explains the power of storytelling for a brand or business.</li>
+</ul>
+
+
+<h2>Tech events assisted</h2>
+
+<ul>
+<li>FIT 2014</li>
+<li>Space Apps Challenge 2014</li>
+</ul>
+
+
+<h2>Healthy accomplishments</h2>
+
+<ul>
+<li>First 10k race</li>
+<li>Total distance ran: 181.1km</li>
+<li>Most steps in a day: 59,902 &ndash; In great trip to Chicago and Indianapolis</li>
+<li>Switched from Stronglifts 5x5 to Greyskull LP strength program &ndash; Got to break my squats plateau.</li>
+</ul>
+
+
+<h2>Side projects completed</h2>
+
+<ul>
+<li><a href="http://twentyoneapp.com">TwentyOne</a></li>
+<li><a href="http://secretsantaservicehq.com">Secret Santa Service</a></li>
+<li><a href="https://github.com/deivuh/DODropletManager-OSX">DO Droplet Manager</a></li>
+<li><a href="http://moodingt.davidhsiehlo.com/">MoodInGT</a></li>
+</ul>
+
+
+<h2>Languages and frameworks used in projects</h2>
+
+<p>Meteor.js, Processing, Rails, Sinatra, Swift, Objective-C, Python</p>
+
+<h2>MOOCs</h2>
+
+<ul>
+<li><a href="https://www.udacity.com/course/ud853">Developing Android Apps</a></li>
+<li><a href="https://www.coursera.org/course/socialpsychology">Social psychology</a></li>
+</ul>
+
+
+<h2>Podcasts discovered</h2>
+
+<ul>
+<li><a href="http://ecorner.stanford.edu/podcasts.html">Stanford Entrepreneurial Thought Leaders</a></li>
+<li><a href="http://www.dancarlin.com/hardcore-history-series/">Hardcore History</a></li>
+</ul>
+
+
+<h2>Games played</h2>
+
+<ul>
+<li>Cave Story+</li>
+<li>Tropico</li>
+<li>Hearthstone</li>
+<li>Killing Floor</li>
+</ul>
+
+
+<h2>Documentaries watched</h2>
+
+<ul>
+<li><a href="http://www.imdb.com/title/tt2821314/?ref_=fn_al_tt_1">The Rise and Rise of Bitcoin</a></li>
+<li><a href="http://www.imdb.com/title/tt3268458/?ref_=fn_al_tt_2">The Internet&rsquo;s Own Boy: The Story of Aaron Swartz</a></li>
+<li><a href="http://www.imdb.com/title/tt2608732/?ref_=fn_al_tt_2">TPB AFK: The Pirate Bay Away from Keyboard</a></li>
+<li><a href="http://www.imdb.com/title/tt2087878/?ref_=nv_sr_3">Minecraft: The Story of Mojang</a></li>
+</ul>
+
+
+<h2>Great TV shows discovered</h2>
+
+<ul>
+<li><a href="http://www.imdb.com/title/tt2243973/?ref_=fn_al_tt_1">Hannibal</a></li>
+<li><a href="http://www.imdb.com/title/tt1475582/?ref_=fn_al_tt_1">Sherlock</a></li>
+<li><a href="http://www.imdb.com/title/tt1856010/?ref_=fn_al_tt_1">House of Cards</a></li>
+<li><a href="http://www.imdb.com/title/tt2543312/?ref_=nv_sr_1">Halt and Catch Fire</a></li>
+<li><a href="http://www.imdb.com/title/tt2575988/?ref_=fn_al_tt_1">Silicon Valley</a></li>
+<li><a href="http://www.imdb.com/title/tt0248654/?ref_=nv_sr_1">Six Feet Under</a></li>
+</ul>
+
+
+<h2>Gunplas built</h2>
+
+<p><a href="http://www.hlj.com/product/BAN971075">MG 00 Gundam Seven Sword/G</a>  and <a href="https://otakusurf.wordpress.com/2013/05/15/review-video-mg-nu-gundam-ver-ka/">MG Nu Gundam Ver. Ka</a> &ndash; I don&rsquo;t normally build gunplas, and in fact, these were my first two. But I learned and actually enjoyed the whole process of cutting, sanding, assembling, painting and top coating.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ship It! Things I Learned in the Process of Shipping My App]]></title>
@@ -86,6 +194,9 @@
 <li>Copy droplet&rsquo;s IP address to clipboard</li>
 <li>Reboot, shutdown and power on droplets</li>
 </ul>
+
+
+<!-- more -->
 
 
 <p>This app works but is still under development, but for those who want to try it or start using it, <del>you can <a href="http://bit.ly/QOpaBs">download the app file</a></del> (See update).</p>
